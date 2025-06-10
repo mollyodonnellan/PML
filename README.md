@@ -43,10 +43,10 @@ sbatch 2_empirical_tree_processor.sh
 
 #### 2. Simulate loci in SimPhy
 
-Navigate to the simulation_scripts directory and run 1_simulation_prep.sh to organize data and generate directories for downstream simulations. Set up the batch script for simphy by copying 3_run_simphy_CLEAN.sh into 3_run_simphy.sh Run 2_prep_simphy.sh to generate a list of SimPhy commands for simulating loci off of the species trees generated previously. Run those commands with 3_run_simphy.sh
+Navigate to the 2_simulation_scripts directory and run 1_simulation_prep.sh to organize data and generate directories for downstream simulations. Set up the batch script for simphy by copying 3_run_simphy_CLEAN.sh into 3_run_simphy.sh Run 2_prep_simphy.sh to generate a list of SimPhy commands for simulating loci off of the species trees generated previously. Run those commands with 3_run_simphy.sh
 
 ```
-cd simulation_scripts
+cd 2_simulation_scripts
 sbatch 1_simulation_prep.sh
 sbatch 2_prep_simphy.sh
 sbatch --array=1-20 3_run_simphy.sh
