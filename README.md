@@ -13,7 +13,21 @@ Add contents here
 
 For consistency, as well as because not all studies release the tree files, the trees were inferred denovo based on provided alignments
 
-Navigate to the datasets/ directory and for each dataset (Fong, Liu, Wickett, McGowen) follow the instructions in the README to download the appropriate dataset and run the accompanying iqtree shell script.
+Navigate into the directory you will be using for the simulation. 
+
+On the command line, enter “git clone https://github.com/mollyodonnellan/PML.git”. You should now have a directory titled “PML”. 
+
+While in the same directory, in the command line, enter “git clone https://github.com/marekborowiec/AMAS.git” to download the appropriate software needed to run this step. You should now have a directory titled “AMAS”.
+
+Navigate to the datasets/ directory in PML, and for each dataset (Fong, Liu, Wickett, McGowen), follow the instructions in the README to download the appropriate dataset.
+
+Use nano to open the accompanying “run_iqtree_[Name]_empirical.sh script.” script. 
+
+Change all lines marked #CHANGE to be relevant to your work. 
+
+Save the script, and run. 
+
+You can check to see if it completed properly by looking at the last line of the Slurm output, which should have the date and time of completion. 
 
 ##### 1. Prepare the starting trees for simulation
 
