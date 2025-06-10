@@ -31,7 +31,9 @@ You can check to see if it completed properly by looking at the last line of the
 
 ##### 1. Prepare the starting trees for simulation
 
-Navigate to the 1_empirical_tree_generation directory. Run 1_empirical_simulation_prep.sh to set up directories for simulations and run 2_empirical_tree_processor.sh to edit species trees inferred in IQtree and generate parameters for downstream simulations.
+Navigate to the 1_empirical_tree_generation directory. Run 1_empirical_simulation_prep.sh to set up directories for simulations. You should now have a folder called "simulations" in your PML directory, which should have the ".treefiles" of each dataset. 
+
+Run 2_empirical_tree_processor.sh to edit species trees inferred in IQtree and generate parameters for downstream simulations.
 
 ```
 cd 1_empirical_tree_generation
