@@ -18,7 +18,7 @@ module load uri/main
 module load iq-tree/2.3.1
 
 #Path to empirical dataset as phylip file. CHANGE to the path for the folder containing files ending in ".phy"
-filesEmpirical="/PML/datasets/Liu_alignments/seq/seq/cds/*.phy"
+filesEmpirical="/PML/datasets/Liu_alignments/cds/*.phy"
 
 #Concatenate input fasta files and prepare partitions ahead of IQTree run. CHANGE to the path for the folder containing the file "AMAS.py"
 python3 /AMAS/amas/AMAS.py concat -f phylip -d dna --out-format fasta --part-format raxml -i ${filesEmpirical} -c 20 -t concatenatedTrain.fasta -p partitionsTrain.txt
