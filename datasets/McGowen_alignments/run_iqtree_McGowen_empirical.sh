@@ -5,6 +5,7 @@
 #SBATCH --ntasks-per-node=1   # processor core(s) per node
 #SBATCH --mail-user="molly.donnellan@uri.edu" #CHANGE TO user email address
 #SBATCH --mail-type=ALL
+#SBATCH -p uri-cpu
 #SBATCH -c 20
 #SBATCH --mem=120G
 
