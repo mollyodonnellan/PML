@@ -20,7 +20,7 @@ module load iq-tree/2.3.1
 filesEmpirical="../PML/datasets/Fong_alignments/IndividualGenes/*.phy"
 
 #Concatenate input fasta files and prepare partitions ahead of IQTree run. CHANGE to the path for the folder containing the file "AMAS.py"
-python3 ../AMAS/amas/AMAS.py concat -f phylip -d dna --out-format fasta --part-format raxml -i *fas -c 20 -t concatenatedTrain.fasta -p partitionsTrain.txt
+python3 ../AMAS/amas/AMAS.py concat -f phylip -d dna --out-format fasta --part-format raxml -i ${filesEmpirical} -c 20 -t concatenatedTrain.fasta -p partitionsTrain.txt
 
 #Run IQtree. Flags: -nt: use 20 CPU cores -spp: specifies partition file but allows partitions to have different evolutionary speeds -pre: specifies prefix for output files -m: determine best fit model immediately followed by tree reconstruction -bb: sets 1000 bootstrap replicates  -alrt: sets 1000 replicates to perform SH-like approximate likelihood test (SH-aLRT)
 iqtree2-mpi -nt 20 -s concatenatedTrain.fasta -spp partitionsTrain.txt -pre inferenceEmpirical -m MFP -bb 1000 -alrt 1000
