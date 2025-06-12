@@ -5,9 +5,9 @@
 #SBATCH --ntasks-per-node=2   # processor core(s) per node
 
 module purge
-module load all/Java/17.0.2 
+module load all/Java/21.0.2
 
-fastsp="/home/aknyshov/alex_data/andromeda_tools/FastSP/FastSP.jar"
+fastsp="/FastSP/FastSP.jar"
 
 
 for i in ../simulations/*/*/1
