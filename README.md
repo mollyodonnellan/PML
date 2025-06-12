@@ -15,7 +15,7 @@ For consistency, as well as because not all studies release the tree files, the 
 
 Navigate into the directory you will be using for the simulation. 
 
-On the command line, enter “git clone https://github.com/mollyodonnellan/PML.git”. You should now have a directory titled “PML”. 
+On the command line, enter “git clone https://github.com/alexandrawalling/PML.git”. You should now have a directory titled “PML”. 
 
 While in the same directory, in the command line, enter “git clone https://github.com/marekborowiec/AMAS.git” to download the appropriate software needed to run this step. You should now have a directory titled “AMAS”.
 
