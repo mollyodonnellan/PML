@@ -14,7 +14,8 @@
 pwd
 date
 
-module load R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2
+module load uri/main
+module load R-bundle-Bioconductor/3.15-foss-2021b-R-4.2.0
 
 for i in ../simulations/*/*/1/
 	do
