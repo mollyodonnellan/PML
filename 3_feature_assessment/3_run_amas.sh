@@ -6,7 +6,7 @@
 
 module purge
 module load Python/3.7.4-GCCcore-8.3.0
-amas="/home/aknyshov/alex_data/andromeda_tools/AMAS/amas/AMAS.py"
+amas="/AMAS/amas/AMAS.py"
 cores=12
 
 pwd
