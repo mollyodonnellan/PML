@@ -4,6 +4,9 @@ library(ggplot2)
 library(geiger)
 library(ggtree)
 
+#Force a headless friendly bitmat device for the session (due to "unable to start device png" error)
+options(bitmapType = "cairo")
+
 #Adjust path to modified.write.tree2.R, a script that adjusts how ape handles treefiles
 source("2_simulation_scripts/modified.write.tree2.R")
 assignInNamespace(".write.tree2", .write.tree2, "ape")
