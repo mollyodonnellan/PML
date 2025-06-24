@@ -27,8 +27,6 @@ Change all lines marked #CHANGE to be relevant to your work.
 
 Save the script, and run. 
 
-You can check to see if it completed properly by looking at the last line of the Slurm output, which should have the date and time of completion. 
-
 ##### 1. Prepare the starting trees for simulation
 
 Navigate to the 1_empirical_tree_generation directory. Run 1_empirical_simulation_prep.sh to set up directories for simulations. You should now have a folder called "simulations" in your PML directory, which should have the ".treefiles" of each dataset. 
