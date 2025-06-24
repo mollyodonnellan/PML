@@ -5,7 +5,7 @@ library(geiger)
 library(ggtree)
 
 #Adjust path to modified.write.tree2.R, a script that adjusts how ape handles treefiles
-source("simulation_scripts/modified.write.tree2.R")
+source("2_simulation_scripts/modified.write.tree2.R")
 assignInNamespace(".write.tree2", .write.tree2, "ape")
 
 #Adjust the paths to ML species trees for each dataset.
