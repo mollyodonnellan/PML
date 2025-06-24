@@ -29,4 +29,4 @@ cd ../simulations/random
 module load uri/main
 module load R-bundle-Bioconductor/3.15-foss-2021b-R-4.2.0
 
-Rscript ../../simulation/run_sptree_SimPhy.R
+Rscript ../../2_simulation_scripts/run_sptree_SimPhy.R
