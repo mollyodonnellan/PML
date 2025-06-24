@@ -15,7 +15,7 @@ library(extraDistr)
 
 sptree <- read.tree("s_tree.trees")
 #convert species tree to an appropriate nexus format species tree file
-source("../../../../simulation_scripts/modified.write.tree2.R")
+source("../../../../2_simulation_scripts/modified.write.tree2.R")
 assignInNamespace(".write.tree2", .write.tree2, "ape")
 write("#NEXUS", file="sptree.nex")
 write("begin trees;", file="sptree.nex", append=T)
