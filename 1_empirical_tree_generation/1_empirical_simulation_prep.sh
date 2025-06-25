@@ -24,6 +24,4 @@ cp datasets/Fong_alignments/*treefile simulations/empirical/fong/1/
 
 cp datasets/Wickett_alignments/*treefile simulations/empirical/wickett/1/
 
-cp datasets/McGowen_alignments/*treefile simulations/empirical/mcgowen/1/
-
 cp datasets/Liu_alignments/*treefile simulations/empirical/liu/1/
