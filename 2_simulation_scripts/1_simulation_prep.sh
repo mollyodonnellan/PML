@@ -18,6 +18,7 @@
 # Folders are generated in the working dir
 # Be sure to adjust path to SimPhy.
 
+#CHANGE "run_sptree_SimPhy.R" script to be relevant to your work
 
 pwd
 date
@@ -28,4 +29,4 @@ cd ../simulations/random
 module load uri/main
 module load R-bundle-Bioconductor/3.15-foss-2021b-R-4.2.0
 
-Rscript ../../2_simulation_scripts/run_sptree_SimPhy.R
+Rscript ../../2_simulation_scripts/run_sptree_SimPhy.R #CHANGE path to be relevant to your work
