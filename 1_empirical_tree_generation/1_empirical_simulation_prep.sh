@@ -17,7 +17,6 @@ date
 
 mkdir -p simulations/empirical/fong/1/
 mkdir -p simulations/empirical/wickett/1/
-mkdir -p simulations/empirical/mcgowen/1/
 mkdir -p simulations/empirical/liu/1/
 
 cp datasets/Fong_alignments/*treefile simulations/empirical/fong/1/
