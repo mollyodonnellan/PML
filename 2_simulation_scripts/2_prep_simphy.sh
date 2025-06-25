@@ -10,6 +10,7 @@
 #SBATCH --mem-per-cpu=6G
 
 ##This script generates simulation properties, runs SimPhy, and preps gene trees for INDELible
+#CHANGE scripts "run_SimPhy.R" and "generate_sim_properties.R" to be relevant to your work
 
 pwd
 date
@@ -24,7 +25,7 @@ do
 	cd $l/1/
 	pwd
 	Rscript ../../../../2_simulation_scripts/generate_sim_properties.R #CHANGE to own path to file
-	cd ../../../../2_simulation_scripts 
+	cd ../../../../2_simulation_scripts #CHANGE to own path to file
 	pwd
 	Rscript run_SimPhy.R $l/1/sptree.nex $l/1/df.csv 3_run_simphy_command_list.txt $l/1/gene_trees.tre $l/1/
 	grep "ds_" 3_run_simphy_command_list.txt | split -l 2000 - 3_run_simphy_list_
