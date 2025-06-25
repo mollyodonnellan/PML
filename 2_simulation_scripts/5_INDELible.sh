@@ -24,14 +24,14 @@ for i in ../simulations/*/*/1/
 	do
 	cd $i
 	pwd
-	Rscript ../../../../simulation_scripts/prep_INDELible.R gene_trees.tre df.csv
+	Rscript ../../../../simulation_scripts/prep_INDELible.R gene_trees.tre df.csv #CHANGE to own path to the script
 	cd alignments1
 	cp ../control.txt .
-	/data/schwartzlab/awalling/tools/INDELibleV1.03/src/indelible
+	/data/schwartzlab/awalling/tools/INDELibleV1.03/src/indelible #CHANGE to own path to INDELible
 	cp ../controlCDS.txt ./control.txt
-	/data/schwartzlab/awalling/tools/INDELibleV1.03/src/indelible
+	/data/schwartzlab/awalling/tools/INDELibleV1.03/src/indelible #CHANGE to own path to INDELible
 	cd ../
-	Rscript ../../../../simulation_scripts/post_INDELible.R alignments1 df.csv
+	Rscript ../../../../simulation_scripts/post_INDELible.R alignments1 df.csv #CHANGE to own path to the script
 	cd ../../../../simulation_scripts/
 	pwd
 done
