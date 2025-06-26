@@ -6,7 +6,8 @@
 #SBATCH -c 1
 #SBATCH --mem-per-cpu=50G
 
-module load R/4.0.3-foss-2020b
+module load uri/main
+module load R/4.2.1-foss-2022a
 date
 
 
