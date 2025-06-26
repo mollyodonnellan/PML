@@ -3,10 +3,14 @@
 #SBATCH --time=72:00:00  # walltime limit (HH:MM:SS)
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --ntasks-per-node=1   # processor core(s) per node
+#SBATCH -p uri-cpu
+#SBATCH --mail-user="molly.donnellan@uri.edu" #CHANGE TO user email address
+#SBATCH --mail-type=ALL
 #SBATCH -c 1
 #SBATCH --mem-per-cpu=6G
 
-module load R/4.0.3-foss-2020b
+module load uri/main
+module load R/4.2.1-foss-2022a
 module load HyPhy/2.5.33-gompi-2020b
 date
 
