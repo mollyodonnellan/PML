@@ -28,6 +28,6 @@ for i in ../simulations/*/*/1
 	mkdir rate_assessment
 	mkdir iqtree_concattree
 	mkdir astral_tree
-	cd ../../../../simulation_scripts
+	cd ../../../../2_simulation_scripts
 done
 date
