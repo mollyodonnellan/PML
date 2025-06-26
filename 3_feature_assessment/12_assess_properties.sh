@@ -6,7 +6,8 @@
 #SBATCH -c 1
 #SBATCH --mem-per-cpu=50G
 
-module load R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2
+module load uri/main
+module load R-bundle-Bioconductor/3.15-foss-2021b-R-4.2.0 
 date
 
 
