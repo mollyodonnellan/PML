@@ -3,6 +3,9 @@
 #SBATCH --time=1:00:00  # walltime limit (HH:MM:SS)
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --ntasks-per-node=12   # processor core(s) per node
+#SBATCH -p uri-cpu
+#SBATCH --mail-user="molly.donnellan@uri.edu" #CHANGE TO user email address
+#SBATCH --mail-type=ALL
 
 module purge
 module load Python/3.7.4-GCCcore-8.3.0
