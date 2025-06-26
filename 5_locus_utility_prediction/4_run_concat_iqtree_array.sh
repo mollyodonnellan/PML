@@ -10,8 +10,11 @@
 
 date
 
-amas="/home/aknyshov/alex_data/andromeda_tools/AMAS/amas/AMAS.py"
-iqtree_exe="/home/aknyshov/alex_data/andromeda_tools/iqtree-2.1.2-Linux/bin/iqtree2"
+module load mpich/4.2.1
+module load uri/main
+module load iq-tree/2.3.1
+
+amas="/home/aknyshov/alex_data/andromeda_tools/AMAS/amas/AMAS.py" #CHANGE to be relevant to your own work
 
 for i in ../simulations/*/*/1/subsets
 do
@@ -24,7 +27,7 @@ do
 	echo $infiles	
 	python ${amas} concat -f fasta -d dna --out-format fasta --part-format raxml -i $infiles -t concatenated_${fileline}.fasta -p partitions_${fileline}.txt
 
-	${iqtree_exe} -nt 20 -s concatenated_${fileline}.fasta -spp partitions_${fileline}.txt -pre inference_${fileline} -m MFP -bb 1000 -alrt 1000
+	iqtree2-mpi -nt 20 -s concatenated_${fileline}.fasta -spp partitions_${fileline}.txt -pre inference_${fileline} -m MFP -bb 1000 -alrt 1000
 
 	cd ../../../../../5_locus_utility_prediction
 done
