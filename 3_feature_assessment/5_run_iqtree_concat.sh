@@ -11,9 +11,11 @@ cd $SLURM_SUBMIT_DIR
 
 date
 
-iqtree_exe="/home/aknyshov/alex_data/andromeda_tools/iqtree-2.1.2-Linux/bin/iqtree2"
+module load mpich/4.2.1
+module load uri/main
+module load iq-tree/2.3.1
 
-amas="/home/aknyshov/alex_data/andromeda_tools/AMAS/amas/AMAS.py"
+amas="../AMAS/amas/AMAS.py" #CHANGE path to file
 
 for i in  ../simulations/*/*/1/iqtree_concattree
 do
@@ -21,11 +23,11 @@ do
 	pwd
 	filesTrain=$(cat $(sed -n 1,4p ../alignmentGroups/array_list.txt | awk '{print "../alignmentGroups/"$0}') | awk '{print "../alignments3/"$0}' | paste -sd" ")
 	python3 ${amas} concat -f fasta -d dna --out-format fasta --part-format raxml -i ${filesTrain} -t concatenatedTrain.fasta -p partitionsTrain.txt
-	${iqtree_exe} -nt 20 -s concatenatedTrain.fasta -spp partitionsTrain.txt -pre inferenceTrain -m MFP -bb 1000 -alrt 1000
+	iqtree2-mpi -nt 20 -s concatenatedTrain.fasta -spp partitionsTrain.txt -pre inferenceTrain -m MFP -bb 1000 -alrt 1000
 
 	filesTest=$(cat $(sed -n 5,8p ../alignmentGroups/array_list.txt | awk '{print "../alignmentGroups/"$0}') | awk '{print "../alignments3/"$0}' | paste -sd" ")
 	python3 ${amas} concat -f fasta -d dna --out-format fasta --part-format raxml -i ${filesTrain} -t concatenatedTest.fasta -p partitionsTest.txt
-${iqtree_exe} -nt 20 -s concatenatedTest.fasta -spp partitionsTest.txt -pre inferenceTest -m MFP -bb 1000 -alrt 1000
+iqtree2-mpi -nt 20 -s concatenatedTest.fasta -spp partitionsTest.txt -pre inferenceTest -m MFP -bb 1000 -alrt 1000
 
 	cd ../../../../../3_feature_assessment
 	
