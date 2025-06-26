@@ -11,6 +11,7 @@ cd $SLURM_SUBMIT_DIR
 
 date
 
+module load uri/main
 module load scikit-learn/0.23.1-foss-2020a-Python-3.8.2
 module load treeinterpreter/0.2.3-foss-2020a
 
