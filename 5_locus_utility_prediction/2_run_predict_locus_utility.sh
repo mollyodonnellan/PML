@@ -11,6 +11,7 @@ cd $SLURM_SUBMIT_DIR
 
 date
 
+module load uri/main
 module load scikit-learn/1.1.2-foss-2022a
 module load matplotlib/3.5.2-foss-2022a
 module load SHAP/0.42.1-foss-2022a
