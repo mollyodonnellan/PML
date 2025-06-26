@@ -19,7 +19,7 @@ do
 	cd astral_tree
 	pwd
 	gene_tree_path="../inferred_gene_trees_Test.tre"
-	astral_path="/home/aknyshov/alex_data/andromeda_tools/ASTRAL/Astral/astral.5.7.8.jar"
+	astral_path="/Astral.5.7.8/Astral/astral.5.7.8.jar" #CHANGE Path to be relevant to your work
 	collapser_path="../../../../../3_feature_assessment/collapse_by.R"
 	grep "/" ${gene_tree_path} > filtered.tre
 	Rscript ${collapser_path} filtered.tre sh-alrt 0 collapsed_trees.tre
