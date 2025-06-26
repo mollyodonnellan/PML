@@ -7,8 +7,8 @@
 #SBATCH --mem-per-cpu=6G
 #SBATCH --array=1-7
 
-
-module load R/4.0.3-foss-2020b
+module load uri/main
+module load R/4.2.1-foss-2022a
 date
 
 for i in ../simulations/*/*/1/
@@ -17,7 +17,7 @@ do
 	pwd	
 	gene_tree_path="inferred_gene_trees_Test.tre"
 	gene_tree_names="inferred_gene_trees_Test.txt"
-	astral_path="/home/aknyshov/alex_data/andromeda_tools/ASTRAL/Astral/astral.5.7.8.jar"
+	astral_path="/home/aknyshov/alex_data/andromeda_tools/ASTRAL/Astral/astral.5.7.8.jar" #CHANGE Path to be relevant to your work
 	collapser_path="../../../../3_feature_assessment/collapse_by.R"
 
 	single_sample=$(sed -n ${SLURM_ARRAY_TASK_ID}p subsets/array_list.txt)
