@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #SBATCH --job-name="align2"
 #SBATCH --time=196:00:00  # walltime limit (HH:MM:SS)
 #SBATCH -c 4
@@ -8,8 +8,8 @@
 
 ### adjust/add sbatch flags as needed
 
-
-module load MAFFT/7.505-GCC-11.3.0-with-extensions
+module load uri/main
+module load MAFFT/7.505-GCC-11.3.0-with-extensions 
 
 for i in ../simulations/*/*/1/alignmentGroups
 do
