@@ -8,6 +8,9 @@
 #SBATCH --mail-type=ALL
 #SBATCH -c 1
 #SBATCH --mem-per-cpu=6G
+#SBATCH -p uri-cpu
+#SBATCH --mail-user="molly.donnellan@uri.edu" #CHANGE TO user email address
+#SBATCH --mail-type=ALL
 
 date
 for i in ../simulations/*/*/1
