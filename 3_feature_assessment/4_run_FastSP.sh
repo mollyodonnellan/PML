@@ -8,10 +8,10 @@
 #SBATCH --mail-type=ALL
 
 module purge
+module load uri/main
 module load all/Java/21.0.2
 
-fastsp="/FastSP/FastSP.jar"
-
+fastsp="../../FastSP/FastSP.jar"
 
 for i in ../simulations/*/*/1
 do	
