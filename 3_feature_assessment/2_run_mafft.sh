@@ -5,16 +5,14 @@
 #SBATCH -p uri-cpu
 #SBATCH --mail-user="molly.donnellan@uri.edu" #CHANGE TO user email address
 #SBATCH --mail-type=ALL
-#SBATCH --array=[1-49]%8
 
 ### adjust/add sbatch flags as needed
 
 module load uri/main
 module load MAFFT/7.505-GCC-11.3.0-with-extensions 
 
-SPP=(../simulations/*/*/1/alignmentGroups)
-i=${SPP[$SLURM_ARRAY_TASK_ID]}
-
+for i in ../simulations/*/*/1/alignmentGroups
+do
 	cd ${i}
 	pwd
 	fileline=$(sed -n ${SLURM_ARRAY_TASK_ID}p array_list.txt)
@@ -25,4 +23,4 @@ i=${SPP[$SLURM_ARRAY_TASK_ID]}
 		mafft --auto --thread 4 ../alignments2/${line} > ../alignments3/${line}
 	done
 	cd ../../../../../3_feature_assessment
-
+done
