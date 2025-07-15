@@ -18,7 +18,7 @@ module load mpich/4.2.1
 module load uri/main
 module load iq-tree/2.3.1
 
-amas="../AMAS/amas/AMAS.py" #CHANGE path to file
+amas="../../AMAS/amas/AMAS.py" #CHANGE path to file
 
 for i in  ../simulations/*/*/1/iqtree_concattree
 do
