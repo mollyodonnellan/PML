@@ -81,7 +81,7 @@ sbatch 1_prep.sh
 
 When complete, submit the alignment job (8 array elements correspond to 2000 files split into 250 file bins):
 ```
-sbatch --array=1-8 2_mafft.sh
+sbatch --array=1-8 2_run_mafft.sh
 ```
 
 When complete, submit jobs to run AMAS (properties), IQ-TREE (trees), and FastSP (alignment accuracy)
